@@ -3,104 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flip Card Login/Signup</title>
+    <title>Elegant Authentication Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="background">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
-        <div class="shape shape4"></div>
-        <div class="shape shape5"></div>
-        <div class="shape shape6"></div>
-        <div class="particle particle1"></div>
-        <div class="particle particle2"></div>
-        <div class="particle particle3"></div>
-        <div class="particle particle4"></div>
-        <div class="particle particle5"></div>
+    <!-- Elegant Background -->
+    <div class="background-elegance">
+        <div class="luxury-particle particle1"></div>
+        <div class="luxury-particle particle2"></div>
+        <div class="luxury-particle particle3"></div>
+        <div class="luxury-particle particle4"></div>
+        <div class="luxury-particle particle5"></div>
+        <div class="elegant-wave wave1"></div>
+        <div class="elegant-wave wave2"></div>
+        <div class="elegant-wave wave3"></div>
     </div>
 
-    <div class="floating-elements">
-        <div class="floating-icon icon1">💫</div>
-        <div class="floating-icon icon2">✨</div>
-        <div class="floating-icon icon3">🌟</div>
-        <div class="floating-icon icon4">⭐</div>
+    <!-- Floating Elegant Icons -->
+    <div class="floating-luxury">
+        <div class="luxury-icon icon1"><i class="fas fa-crown"></i></div>
+        <div class="luxury-icon icon2"><i class="fas fa-gem"></i></div>
+        <div class="luxury-icon icon3"><i class="fas fa-star"></i></div>
+        <div class="luxury-icon icon4"><i class="fas fa-leaf"></i></div>
+        <div class="luxury-icon icon5"><i class="fas fa-infinity"></i></div>
     </div>
 
-    <div class="card-container" id="cardContainer">
-        <div class="card" id="flipCard">
-            <!-- Front side - Sign In -->
-            <div class="face front">
-                <h2>Welcome Back</h2>
-                <form id="loginForm">
-                    <div class="input-group">
-                        <input type="email" placeholder="Email" required>
-                        <div class="input-highlight"></div>
+    <!-- Main Container -->
+    <div class="main-container" id="mainContainer">
+        <div class="form-container">
+            <!-- Elegant Side Panel -->
+            <div class="side-panel" id="sidePanel">
+                <div class="panel-content" id="panelContent">
+                    <div class="welcome-content">
+                        <div class="panel-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h1>Welcome Back</h1>
+                        <p>Step into excellence. Your journey continues with us.</p>
+                        <button class="elegant-btn" id="signInBtn">
+                            <span>SIGN IN</span>
+                            <div class="btn-shine"></div>
+                        </button>
                     </div>
-                    <div class="input-group">
-                        <input type="password" placeholder="Password" required>
-                        <div class="input-highlight"></div>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Sign In</span>
-                        <div class="btn-ripple"></div>
-                    </button>
-                </form>
-                
-                <div class="toggle-link" onclick="flipToSignup()">
-                    Don't have an account? <span>Sign Up</span>
-                </div>
-                
-                <div class="social-login">
-                    <div class="divider">OR</div>
-                    <div class="social-buttons">
-                        <button class="social-btn google">Google</button>
-                        <button class="social-btn github">GitHub</button>
+                    <div class="new-here-content hidden">
+                        <div class="panel-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h1>Join Our Elite</h1>
+                        <p>Discover a world of premium experiences tailored just for you.</p>
+                        <button class="elegant-btn" id="signUpBtn">
+                            <span>SIGN UP</span>
+                            <div class="btn-shine"></div>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Back side - Sign Up -->
-            <div class="face back">
-                <h2>Join Us Today</h2>
-                <form id="signupForm">
-                    <div class="input-group">
-                        <input type="text" placeholder="Full Name" required>
-                        <div class="input-highlight"></div>
+            <!-- Forms Container -->
+            <div class="forms-wrapper">
+                <!-- Enhanced Sign Up Form -->
+                <div class="form-section signup-form" id="signupForm">
+                    <div class="form-header">
+                        <div class="form-logo">
+                            <i class="fas fa-diamond"></i>
+                        </div>
+                        <h2 class="form-title">Create Elite Account</h2>
+                        <p class="form-subtitle">Join our exclusive community</p>
                     </div>
-                    <div class="input-group">
-                        <input type="email" placeholder="Email" required>
-                        <div class="input-highlight"></div>
+
+                    <div class="premium-social">
+                        <button class="premium-social-btn google">
+                            <i class="fab fa-google"></i>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button class="premium-social-btn apple">
+                            <i class="fab fa-apple"></i>
+                            <span>Continue with Apple</span>
+                        </button>
                     </div>
-                    <div class="input-group">
-                        <input type="password" id="password" placeholder="Password" required>
-                        <div class="input-highlight"></div>
+
+                    <div class="elegant-divider">
+                        <span>or create with email</span>
                     </div>
-                    <div class="input-group">
-                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-                        <div class="input-highlight"></div>
-                    </div>
-                    <div class="error-message" id="passwordError"></div>
-                    <button type="submit" class="submit-btn">
-                        <span>Create Account</span>
-                        <div class="btn-ripple"></div>
-                    </button>
-                </form>
-                
-                <div class="toggle-link" onclick="flipToLogin()">
-                    Already have an account? <span>Sign In</span>
+                    
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <div class="luxury-input">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" id="firstName" placeholder="First Name" required>
+                                    <label>First Name</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                            </div>
+                            <div class="form-group half">
+                                <div class="luxury-input">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" id="lastName" placeholder="Last Name" required>
+                                    <label>Last Name</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="signupEmail" placeholder="Email Address" required>
+                                <label>Email Address</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-phone input-icon"></i>
+                                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                                <label>Phone Number</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-calendar input-icon"></i>
+                                <input type="date" id="birthDate" required>
+                                <label>Date of Birth</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-venus-mars input-icon"></i>
+                                <select id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                                <label>Gender</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="signupPassword" placeholder="Create Password" required>
+                                <label>Create Password</label>
+                                <div class="input-focus-line"></div>
+                                <i class="fas fa-eye password-toggle" onclick="togglePassword('signupPassword')"></i>
+                            </div>
+                            <div class="password-strength" id="passwordStrength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Password strength</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                                <label>Confirm Password</label>
+                                <div class="input-focus-line"></div>
+                                <i class="fas fa-eye password-toggle" onclick="togglePassword('confirmPassword')"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-briefcase input-icon"></i>
+                                <select id="profession" required>
+                                    <option value="">Select Profession</option>
+                                    <option value="student">Student</option>
+                                    <option value="developer">Developer</option>
+                                    <option value="designer">Designer</option>
+                                    <option value="manager">Manager</option>
+                                    <option value="entrepreneur">Entrepreneur</option>
+                                    <option value="consultant">Consultant</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label>Profession</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="error-message" id="signupError"></div>
+                        
+                        <div class="elegant-checkboxes">
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" id="termsCheck" required>
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="checkbox-text">I agree to the <a href="#" class="elegant-link">Terms & Conditions</a> and <a href="#" class="elegant-link">Privacy Policy</a></span>
+                            </label>
+
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" id="newsletterCheck">
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="checkbox-text">Subscribe to our premium newsletter for exclusive offers</span>
+                            </label>
+
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" id="marketingCheck">
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="checkbox-text">Receive marketing communications via email and SMS</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="luxury-submit">
+                            <span class="btn-text">CREATE ELITE ACCOUNT</span>
+                            <div class="btn-loader">
+                                <div class="loader-ring"></div>
+                            </div>
+                            <div class="btn-success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </button>
+                    </form>
                 </div>
-                
-                <div class="social-login">
-                    <div class="divider">OR</div>
-                    <div class="social-buttons">
-                        <button class="social-btn google">Google</button>
-                        <button class="social-btn github">GitHub</button>
+
+                <!-- Enhanced Sign In Form -->
+                <div class="form-section signin-form active" id="signinForm">
+                    <div class="form-header">
+                        <div class="form-logo">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h2 class="form-title">Welcome Back</h2>
+                        <p class="form-subtitle">Access your elite account</p>
+                    </div>
+
+                    <div class="premium-social">
+                        <button class="premium-social-btn google">
+                            <i class="fab fa-google"></i>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button class="premium-social-btn apple">
+                            <i class="fab fa-apple"></i>
+                            <span>Continue with Apple</span>
+                        </button>
+                    </div>
+
+                    <div class="elegant-divider">
+                        <span>or sign in with email</span>
+                    </div>
+                    
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="signinEmail" placeholder="Email Address" required>
+                                <label>Email Address</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="luxury-input">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="signinPassword" placeholder="Password" required>
+                                <label>Password</label>
+                                <div class="input-focus-line"></div>
+                                <i class="fas fa-eye password-toggle" onclick="togglePassword('signinPassword')"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="error-message" id="signinError"></div>
+                        
+                        <div class="form-options">
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="checkbox-text">Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="luxury-submit">
+                            <span class="btn-text">SIGN IN TO ACCOUNT</span>
+                            <div class="btn-loader">
+                                <div class="loader-ring"></div>
+                            </div>
+                            <div class="btn-success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </button>
+                    </form>
+
+                    <div class="additional-options">
+                        <p>Need help? <a href="#" class="elegant-link">Contact Support</a></p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="successTitle">Success!</h3>
+            <p id="successMessage">Your account has been created successfully.</p>
+            <button class="modal-close" onclick="closeSuccessModal()">Continue</button>
         </div>
     </div>
 
